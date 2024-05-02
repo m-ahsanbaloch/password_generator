@@ -1,19 +1,43 @@
 body {
-	font-family: Arial, sans-serif;
-	text-align: center;
-	padding: 50px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
 }
+/* .main{
+    display: flex;
+} */
 
 button {
-	padding: 10px 20px;
-	font-size: 16px;
-	margin-top: 20px;
+  background-color: rgb(218, 39, 39);
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  background-color: red;
+  color: whitesmoke;
+}
+button:focus {
+  transform: skew(15deg);
 }
 
 #password {
-	margin-top: 20px;
-	padding: 10px;
-	font-size: 24px;
-	width: 300px;
-	height: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 24px;
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid rgb(119, 119, 152);
+}
+h1 {
+  color: red;
+}
+input {
+  color: rgb(119, 119, 152);
 }
