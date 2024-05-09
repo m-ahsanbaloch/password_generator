@@ -3,9 +3,9 @@ body {
   text-align: center;
   padding: 50px;
 }
-/* .main{
-    display: flex;
-} */
+.main{
+  width: 50%;   
+}
 
 button {
   background-color: rgb(218, 39, 39);
@@ -27,10 +27,11 @@ button:focus {
 }
 
 #password {
+  text-align: center;
   margin-top: 20px;
   padding: 10px;
   font-size: 24px;
-  width: 300px;
+  width: 100%;
   height: 40px;
   border-radius: 15px;
   border: 1px solid rgb(119, 119, 152);
@@ -38,6 +39,10 @@ button:focus {
 h1 {
   color: red;
 }
+.input{
+  width: 100%;
+}
 input {
+  width: 70%;
   color: rgb(119, 119, 152);
 }
