@@ -40,6 +40,11 @@ function generate() {
   
   // return document.getElementById("password").value = password.slice(0,13)
 }
+
+function rangeChange(){
+  document.getElementById("rValue").innerHTML = `value ${range.value}`
+}
+// document.getElementById("rValue").innerHTML = `value ${range.value}`
 // var saved = generate().toString()
 // // console.log(generate())
 // console.log(range)
