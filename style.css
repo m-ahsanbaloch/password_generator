@@ -2,12 +2,18 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 50px;
+  color: rgb(122, 120, 120);
 }
 .main{
+  padding: 10px;
   width: 50%;   
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 button {
+  width: 80%;
   background-color: rgb(218, 39, 39);
   border: 0px;
   border-radius: 10px;
@@ -22,16 +28,16 @@ button:hover {
   background-color: red;
   color: whitesmoke;
 }
-button:focus {
+/* button:focus {
   transform: skew(15deg);
-}
+} */
 
 #password {
   text-align: center;
   margin-top: 20px;
   padding: 10px;
   font-size: 24px;
-  width: 100%;
+  width: 80%;
   height: 40px;
   border-radius: 15px;
   border: 1px solid rgb(119, 119, 152);
@@ -51,5 +57,15 @@ input:focus{
   border: none;
 }
 #rangee {
+  height: 2px;
+  width: 80%;
   accent-color: red;
+}
+/* label{
+  border: 1px solid gray;
+} */
+.checkbox{
+  margin: 13px 10px;
+  width: 15px;
+  height: 15px;
 }

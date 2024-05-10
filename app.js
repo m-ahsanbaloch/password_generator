@@ -56,7 +56,7 @@ function generate() {
   ) {
     var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var small = "abcdefghijklmnopqrstuvwxyz";
-    var symbols = "@$%^!*(#^*#(";
+    var symbols = "@$%^!*(#^%&*@$%$^*#(";
     var num1 = "123456789123456789";
     var allCharacters = cap + small + symbols + num1;
     var allPassword = "";
@@ -95,7 +95,7 @@ function generate() {
     }
     document.getElementById("password").value = numPass.slice(0, range.value);
   } else if (checkbox4.checked) {
-    var symb = "@$^&*^(";
+    var symb = "@$^&*^@!~!!```2@%^$%&$@@#%&*))!(";
     var symbPass = "";
     for (i = 0; i < symb.length; i++) {
       var randomValue = Math.floor(Math.random() * symb.length);
