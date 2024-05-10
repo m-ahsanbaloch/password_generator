@@ -1,111 +1,57 @@
 var range = document.getElementById("rangee");
-var screen = (document.getElementById("password").value = "");
+var screen = document.getElementById("password");
 var upper = document.getElementById("checkbox1");
 var lower = document.getElementById("checkbox2");
 var checkbox3 = document.getElementById("checkbox3");
 var checkbox4 = document.getElementById("checkbox4");
-function generate() {
-  // var small = "abcdefghijklmnopqrstuvwxyz";
-  // var smallPass = "";
-  // for (i = 0; i < small.length; i++) {
-  //   var randomValue = Math.floor(Math.random() * small.length);
-  //   smallPass += small[randomValue];
-  // }
-  // // console.log(smallPass)
-
-  // var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // var capPass = "";
-  // for (i = 0; i < cap.length; i++) {
-  //   var randomValue = Math.floor(Math.random() * cap.length);
-  //   capPass += cap[randomValue];
-  // }
-  // var sym = "_@$!><&*#";
-  // var symPass = "";
-  // for (i = 0; i < sym.length; i++) {
-  //   var randomValue = Math.floor(Math.random() * sym.length);
-  //   symPass += sym[randomValue];
-  // }
-  // // console.log(capPass)
-  // var result =
-  //   smallPass.slice(0, 4) + capPass.slice(0, 4) + symPass.slice(0, 4);
-  // console.log(result);
-  // document.getElementById("password").value = result;
-
-  // var small = "abcdefghijklmnopqrstuvwxyz";
-  // var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // var sym = "_@$!><&*#";
-  // var allCharacters = small + cap + sym;
-  // var password = "";
-  // for (i = 0; i < allCharacters.length; i++) {
-  //   var randomValue = Math.floor(Math.random() * allCharacters.length);
-  //   password += allCharacters[randomValue];
-  // }
-  // document.getElementById("password").value = password.slice(0,range.value)
-
-  // return document.getElementById("password").value = password.slice(0,13)
-
-  if (
-    upper.checked &&
-    lower.checked &&
-    checkbox3.checked &&
-    checkbox4.checked
-  ) {
-    var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var small = "abcdefghijklmnopqrstuvwxyz";
-    var symbols = "@$%^!*(#^%&*@$%$^*#(";
-    var num1 = "123456789123456789";
-    var allCharacters = cap + small + symbols + num1;
-    var allPassword = "";
-
-    for (i = 0; i < allCharacters.length; i++) {
-      var randomValue = Math.floor(Math.random() * allCharacters.length);
-      allPassword += allCharacters[randomValue];
-    }
-
-    document.getElementById("password").value = allPassword.slice(
-      0,
-      range.value
-    );
-  } else if (lower.checked) {
-    var small = "abcdefghijklmnopqrstuvwxyz";
-    var sallPass = "";
-    for (i = 0; i < small.length; i++) {
-      var randomValue = Math.floor(Math.random() * small.length);
-      sallPass += small[randomValue];
-    }
-    document.getElementById("password").value = sallPass.slice(0, range.value);
-  } else if (upper.checked) {
-    var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var capPass = "";
-    for (i = 0; i < cap.length; i++) {
-      var randomValue = Math.floor(Math.random() * cap.length);
-      capPass += cap[randomValue];
-    }
-    document.getElementById("password").value = capPass.slice(0, range.value);
-  } else if (checkbox3.checked) {
-    var num11 = "123453687934242366756";
-    var numPass = "";
-    for (i = 0; i < num11.length; i++) {
-      var randomValue = Math.floor(Math.random() * num11.length);
-      numPass += num11[randomValue];
-    }
-    document.getElementById("password").value = numPass.slice(0, range.value);
-  } else if (checkbox4.checked) {
-    var symb = "@$^&*^@!~!!```2@%^$%&$  @@#%&*))!(";
-    var symbPass = "";
-    for (i = 0; i < symb.length; i++) {
-      var randomValue = Math.floor(Math.random() * symb.length);
-      symbPass += symb[randomValue];
-    }
-    document.getElementById("password").value = symbPass.slice(0, range.value);
-  } else {
-    document.getElementById("password").value = "Atleast Mark One CheckBox";
-  }
-}
-
-document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
+//  ============= Function_Range =========
 function rangeChange() {
   document.getElementById(
     "rValue"
   ).innerHTML = `Password Length ${range.value}`;
+  return range.value;
 }
+//  ============= Function_Range =========
+
+//  ============= Function_Generate =========
+function generate() {
+  // ====================== Work Start ============
+  
+  var allCharacters;
+  var allPassword = "";
+  if (
+    !upper.checked &&
+    !lower.checked &&
+    !checkbox3.checked &&
+    !checkbox4.checked
+  ) {
+    screen.value = "Atleast Mark One Checkbox";
+  } else {
+    if (upper.checked) {
+      allCharacters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log("this is upper");
+    }
+    if (lower.checked) {
+      allCharacters += "abcdefghijklmnopqrstuvwxyz";
+      console.log("this is small");
+    }
+    if (checkbox3.checked) {
+      allCharacters += "1234567813534689131357790";
+      console.log("this is number");
+    }
+    if (checkbox4.checked) {
+      allCharacters += "~!@#$%^&*(@!^*(#@$@#$!))!@#%_+";
+      console.log("this is symb");
+    }
+
+    for (i = 0; i < range.value; i++) {
+      var randomValue = Math.floor(Math.random() * allCharacters.length);
+      allPassword += allCharacters[randomValue];
+    }
+    screen.value = allPassword.slice(0, range.value);
+    console.log(allPassword);
+  }
+  // ====================== Work End ============
+}
+//  ============= Function_Generate =========
+document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
