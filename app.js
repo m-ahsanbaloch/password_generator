@@ -102,7 +102,7 @@ function generate() {
     document.getElementById("password").value = "Atleast Mark One CheckBox";
   }
 }
-
+ 
 document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
 function rangeChange() {
   document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
