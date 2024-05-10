@@ -5,6 +5,8 @@ var lower = document.getElementById("checkbox2");
 var checkbox3 = document.getElementById("checkbox3");
 var checkbox4 = document.getElementById("checkbox4");
 function generate() {
+
+
   // var small = "abcdefghijklmnopqrstuvwxyz";
   // var smallPass = "";
   // for (i = 0; i < small.length; i++) {
@@ -31,18 +33,21 @@ function generate() {
   // console.log(result);
   // document.getElementById("password").value = result;
 
-  var small = "abcdefghijklmnopqrstuvwxyz";
-  var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var sym = "_@$!><&*#";
-  var allCharacters = small + cap + sym;
-  var password = "";
-  for (i = 0; i < allCharacters.length; i++) {
-    var randomValue = Math.floor(Math.random() * allCharacters.length);
-    password += allCharacters[randomValue];
-  }
+  // var small = "abcdefghijklmnopqrstuvwxyz";
+  // var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  // var sym = "_@$!><&*#";
+  // var allCharacters = small + cap + sym;
+  // var password = "";
+  // for (i = 0; i < allCharacters.length; i++) {
+  //   var randomValue = Math.floor(Math.random() * allCharacters.length);
+  //   password += allCharacters[randomValue];
+  // }
   // document.getElementById("password").value = password.slice(0,range.value)
 
   // return document.getElementById("password").value = password.slice(0,13)
+
+
+
   if (
     upper.checked &&
     lower.checked &&
@@ -76,8 +81,8 @@ function generate() {
   } else if (upper.checked) {
     var cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var capPass = "";
-    for (i = 0; i < small.length; i++) {
-      var randomValue = Math.floor(Math.random() * small.length);
+    for (i = 0; i < cap.length; i++) {
+      var randomValue = Math.floor(Math.random() * cap.length);
       capPass += cap[randomValue];
     }
     document.getElementById("password").value = capPass.slice(0, range.value);
@@ -101,20 +106,10 @@ function generate() {
     document.getElementById("password").value = "Atleast Mark One CheckBox";
   }
 }
-//   document.getElementById("password").value = smallPass.slice(0,range.value)
-//   // console.log(smallPass)
-// }
+
 
 document.getElementById("rValue").innerHTML = `Length ${range.value}`;
-// document.getElementById('.upperCase').value
 function rangeChange() {
   document.getElementById("rValue").innerHTML = `Length ${range.value}`;
 }
-// document.getElementById("rValue").innerHTML = `value ${range.value}`
-// var saved = generate().toString()
-// // console.log(generate())
-// console.log(range)
-// function range(){
-//   // var range = document.getElementById("range").value
-//   // console.log(range)
-// }
+ 

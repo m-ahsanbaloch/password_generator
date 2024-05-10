@@ -46,3 +46,10 @@ input {
   width: 70%;
   color: rgb(119, 119, 152);
 }
+input:focus{
+  outline: 0px;
+  border: none;
+}
+#rangee {
+  accent-color: red;
+}
