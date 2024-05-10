@@ -1,5 +1,6 @@
 var range = document.getElementById("rangee")
 var screen = (document.getElementById("password").value = "");
+var alpa = document.getElementById("upperCase")
 function generate() {
   // var small = "abcdefghijklmnopqrstuvwxyz";
   // var smallPass = "";
@@ -39,10 +40,16 @@ function generate() {
   document.getElementById("password").value = password.slice(0,range.value)
   
   // return document.getElementById("password").value = password.slice(0,13)
+if(alpa.checked){
+  console.log("yeaaa")
+   console.log(check.value);
+}
 }
 
+document.getElementById("rValue").innerHTML = `Length ${range.value}`
+// document.getElementById('.upperCase').value
 function rangeChange(){
-  document.getElementById("rValue").innerHTML = `value ${range.value}`
+  document.getElementById("rValue").innerHTML = `Length ${range.value}`
 }
 // document.getElementById("rValue").innerHTML = `value ${range.value}`
 // var saved = generate().toString()
