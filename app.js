@@ -5,8 +5,6 @@ var lower = document.getElementById("checkbox2");
 var checkbox3 = document.getElementById("checkbox3");
 var checkbox4 = document.getElementById("checkbox4");
 function generate() {
-
-
   // var small = "abcdefghijklmnopqrstuvwxyz";
   // var smallPass = "";
   // for (i = 0; i < small.length; i++) {
@@ -45,8 +43,6 @@ function generate() {
   // document.getElementById("password").value = password.slice(0,range.value)
 
   // return document.getElementById("password").value = password.slice(0,13)
-
-
 
   if (
     upper.checked &&
@@ -107,9 +103,7 @@ function generate() {
   }
 }
 
-
-document.getElementById("rValue").innerHTML = `Length ${range.value}`;
+document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
 function rangeChange() {
-  document.getElementById("rValue").innerHTML = `Length ${range.value}`;
+  document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
 }
- 

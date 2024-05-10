@@ -4,9 +4,9 @@ body {
   padding: 50px;
   color: rgb(122, 120, 120);
 }
-.main{
+.main {
   padding: 10px;
-  width: 50%;   
+  width: 50%;
   border: 1px solid gray;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -42,17 +42,17 @@ button:hover {
   border-radius: 15px;
   border: 1px solid rgb(119, 119, 152);
 }
-h1 {
+h2 {
   color: red;
 }
-.input{
+.input {
   width: 100%;
 }
 input {
   width: 70%;
   color: rgb(119, 119, 152);
 }
-input:focus{
+input:focus {
   outline: 0px;
   border: none;
 }
@@ -64,7 +64,7 @@ input:focus{
 /* label{
   border: 1px solid gray;
 } */
-.checkbox{
+.checkbox {
   margin: 13px 10px;
   width: 15px;
   height: 15px;
