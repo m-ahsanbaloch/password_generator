@@ -54,4 +54,4 @@ function generate() {
   // ====================== Work End ============
 }
 //  ============= Function_Generate =========
-document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
+// document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
