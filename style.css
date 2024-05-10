@@ -69,3 +69,30 @@ input:focus {
   width: 15px;
   height: 15px;
 }
+
+input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  margin-bottom: 15px;
+
+  /* vertical-align: middle; */
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  /* vertical-align: middle; */
+  background-color: red;
+  border-radius: 2px;
+}

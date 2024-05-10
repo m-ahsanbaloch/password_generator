@@ -83,7 +83,7 @@ function generate() {
     }
     document.getElementById("password").value = capPass.slice(0, range.value);
   } else if (checkbox3.checked) {
-    var num11 = "12345368796";
+    var num11 = "123453687934242366756";
     var numPass = "";
     for (i = 0; i < num11.length; i++) {
       var randomValue = Math.floor(Math.random() * num11.length);
@@ -91,7 +91,7 @@ function generate() {
     }
     document.getElementById("password").value = numPass.slice(0, range.value);
   } else if (checkbox4.checked) {
-    var symb = "@$^&*^@!~!!```2@%^$%&$@@#%&*))!(";
+    var symb = "@$^&*^@!~!!```2@%^$%&$  @@#%&*))!(";
     var symbPass = "";
     for (i = 0; i < symb.length; i++) {
       var randomValue = Math.floor(Math.random() * symb.length);
@@ -101,9 +101,11 @@ function generate() {
   } else {
     document.getElementById("password").value = "Atleast Mark One CheckBox";
   }
-}       
- 
+}
+
 document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
 function rangeChange() {
-  document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
+  document.getElementById(
+    "rValue"
+  ).innerHTML = `Password Length ${range.value}`;
 }
