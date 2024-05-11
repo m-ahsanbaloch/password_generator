@@ -68,6 +68,7 @@ input:focus {
   margin: 13px 10px;
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 input[type="checkbox"]::before {
