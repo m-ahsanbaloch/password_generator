@@ -68,7 +68,10 @@ input:focus {
   margin: 13px 10px;
   width: 15px;
   height: 15px;
-  cursor: pointer;
+  
+}
+p{
+  cursor: pointer !important;
 }
 
 input[type="checkbox"]::before {
@@ -96,4 +99,8 @@ input[type="checkbox"]:checked::before {
   /* vertical-align: middle; */
   background-color: red;
   border-radius: 2px;
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
 }
