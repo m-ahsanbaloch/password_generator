@@ -54,4 +54,16 @@ function generate() {
   // ====================== Work End ============
 }
 //  ============= Function_Generate =========
+
+function copy(){
+  navigator.clipboard.writeText(screen.value)
+  if(screen.value === "Atleast Mark One Checkbox" || screen.value === ""){
+    alert("Please Generate Password First")
+  }
+  else{
+    alert("Password Copied")
+    screen.value = ""
+  }
+  console.log(screen.value)
+}
 // document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
