@@ -61,7 +61,7 @@ function copy(){
     alert("Please Generate Password First")
   }
   else{
-    alert("Password Copied")
+    alert(`Password (${screen.value}) Copied Successfully `)
     screen.value = ""
   }
   console.log(screen.value)
