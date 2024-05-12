@@ -66,4 +66,4 @@ function copy(){
   }
   console.log(screen.value)
 }
-// document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
+document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
