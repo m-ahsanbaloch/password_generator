@@ -56,11 +56,11 @@ function generate() {
 //  ============= Function_Generate =========
 
 function copy(){
-  navigator.clipboard.writeText(screen.value)
   if(screen.value === "Atleast Mark One Checkbox" || screen.value === ""){
     alert("Please Generate Password First")
   }
   else{
+    navigator.clipboard.writeText(screen.value)
     alert(`Password (${screen.value}) Copied Successfully `)
     screen.value = ""
   }
