@@ -48,10 +48,7 @@ h2 {
 .input {
   width: 100%;
 }
-input {
-  width: 70%;
-  color: rgb(119, 119, 152);
-}
+
 input:focus {
   outline: 0px;
   border: none;
@@ -103,4 +100,15 @@ input[type="checkbox"]:checked::before {
 
 input[type="checkbox"]{
   cursor: pointer;
+}
+input {
+  /* position: relative; */
+  /* background-color: red; */
+  width: 70%;
+  color: rgb(119, 119, 152);
+}
+i{
+  /* position: absolute; */
+  margin-left: 12px;
+  left: 20px;
 }

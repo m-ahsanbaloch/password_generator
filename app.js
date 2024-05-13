@@ -16,7 +16,7 @@ function rangeChange() {
 //  ============= Function_Generate =========
 function generate() {
   // ====================== Work Start ============
-  
+
   var allCharacters;
   var allPassword = "";
   if (
@@ -51,19 +51,36 @@ function generate() {
     screen.value = allPassword.slice(0, range.value);
     console.log(allPassword);
   }
+  if (
+    screen.value === "Atleast Mark One Checkbox" ||
+    screen.value === "" ||
+    screen.value === "Copied"
+  ) {
+    alert("Please Generate Password First");
+  } else {
+    document.getElementById("copyIcon").style.cssText = "display:block !important;";
+    document.getElementById("copyIcon").style.cssText = "color:red;";
+    // alert(`Password (${screen.value}) Copied Successfully `)
+    // screen.value = "Copied";
+  }
   // ====================== Work End ============
 }
 //  ============= Function_Generate =========
 
-function copy(){
-  if(screen.value === "Atleast Mark One Checkbox" || screen.value === ""){
-    alert("Please Generate Password First")
+function copy() {
+  if (
+    screen.value === "Atleast Mark One Checkbox" ||
+    screen.value === "" ||
+    screen.value === "Copied"
+  ) {
+    alert("Please Generate Password First");
+  } else {
+    navigator.clipboard.writeText(screen.value);
+    // document.getElementById("copyIcon").style.cssText = "display:block !important;";
+    // document.getElementById("copyIcon").style.cssText = "color:red;";
+    // alert(`Password (${screen.value}) Copied Successfully `)
+    screen.value = "Copied";
   }
-  else{
-    navigator.clipboard.writeText(screen.value)
-    alert(`Password (${screen.value}) Copied Successfully `)
-    screen.value = ""
-  }
-  console.log(screen.value)
+  console.log(screen.value);
 }
 document.getElementById("rValue").innerHTML = `Password Length ${range.value}`;
