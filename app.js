@@ -58,9 +58,9 @@ function generate() {
   ) {
     alert("Please Generate Password First");
   } else {
-    document.getElementById("copyIcon").style.cssText = "display:block !important;";
-    document.getElementById("copyIcon").style.cssText = "color:red;";
     // alert(`Password (${screen.value}) Copied Successfully `)
+    document.getElementById("copyIcon").style.cssText = "display:flex !important;";
+    document.getElementById("copyIcon").style = "color:grey;";
     // screen.value = "Copied";
   }
   // ====================== Work End ============
@@ -73,10 +73,12 @@ function copy() {
     screen.value === "" ||
     screen.value === "Copied"
   ) {
-    alert("Please Generate Password First");
+    alert("Please Re-Generate Password ");
   } else {
     navigator.clipboard.writeText(screen.value);
-   o
+    document.getElementById("copyIcon").style.cssText = "color:red;";
+
+  //  alert(`Password (${screen.value}) Copied Successfully `)
     // alert(`Password (${screen.value}) Copied Successfully `)
     screen.value = "Copied";
   }
