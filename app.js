@@ -76,8 +76,7 @@ function copy() {
     alert("Please Generate Password First");
   } else {
     navigator.clipboard.writeText(screen.value);
-    // document.getElementById("copyIcon").style.cssText = "display:block !important;";
-    // document.getElementById("copyIcon").style.cssText = "color:red;";
+   o
     // alert(`Password (${screen.value}) Copied Successfully `)
     screen.value = "Copied";
   }
